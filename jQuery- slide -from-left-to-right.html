@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery从左到右滑出遮罩效果</title>
+<style>
+*{margin:0;padding:0}
+a{text-decoration:none}
+
+.sspzzs{width: 435px;height: 218px;position:relative;float:left;overflow:hidden;}
+.sspzzs .breed{width: 435px;height: 209px;padding:9px 15px 0 16px;position:absolute;top:0;left:435px;background: #d54b4b;transition:all .2s}
+.sspzzs .breed h2{height: 43px;line-height: 43px;font-size: 18px;font-weight: normal;color: #FFF;padding-left: 10px;overflow: hidden;}
+.sspzzs .breed h2 a{color: #FFF;}
+.sspzzs .breed table{border: none;font-size: 14px;padding-left: 67px;padding-bottom: 12px;}
+.sspzzs .breed table td{height: 30px;line-height: 30px;padding-right: 10px;}
+.sspzzs .breed table td a{color: #FFF;}
+</style>
+</head>
+<body>
+<div class="sspzzs">
+	<a href="" class="sszz_img">
+		<img src="http://futures.hexun.com/upload/dssfwpt/images/dss_4.jpg" />
+	</a>
+	<div class="breed">
+		<h2><a href="javascript:void(0)" target="_blank">农产品</a></h2>
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tbody>
+				<tr>
+					<td><a href="http://www.dce.com.cn/dalianshangpin/sspz/ym/index.html" target="_blank">玉米</a></td>
+					<td><a href="http://www.dce.com.cn/dalianshangpin/sspz/2081746/index.html" target="_blank">玉米淀粉</a></td>
+					<td><a href="http://www.dce.com.cn/dalianshangpin/sspz/487124/index.html" target="_blank">黄大豆1号</a></td>
+					<td><a href="http://www.dce.com.cn/dalianshangpin/sspz/487153/index.html" target="_blank">黄大豆2号</a></td>
+					<td><a href="http://www.dce.com.cn/dalianshangpin/sspz/487180/index.html" target="_blank">豆粕</a></td>
+				</tr>
+				<tr>
+					<td><a href="http://www.dce.com.cn/dalianshangpin/sspz/487207/index.html" target="_blank">豆油</a></td>
+					<td><a href="http://www.dce.com.cn/dalianshangpin/sspz/487234/index.html" target="_blank">棕榈油</a></td>
+					<td><a href="http://www.dce.com.cn/dalianshangpin/sspz/487315/index.html" target="_blank">纤维板</a></td>
+					<td><a href="http://www.dce.com.cn/dalianshangpin/sspz/487288/index.html" target="_blank">胶合板</a></td>
+					<td><a href="http://www.dce.com.cn/dalianshangpin/sspz/487261/index.html" target="_blank">鸡蛋</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<h2 style="border-top-color: rgb(218, 97, 97); border-top-width: 1px; border-top-style: solid;"><a href="javascript:void(0)" target="_blank">工业品</a></h2>
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tbody>
+				<tr>
+					<td><a href="http://www.dce.com.cn/dalianshangpin/sspz/487342/index.html&#10;" target="_blank">聚乙烯</a></td>
+					<td><a href="http://www.dce.com.cn/dalianshangpin/sspz/487369/index.html&#10;" target="_blank">聚氯乙烯</a></td>
+					<td><a href="http://www.dce.com.cn/dalianshangpin/sspz/487396/index.html" target="_blank">聚丙烯</a></td>
+					<td><a href="http://www.dce.com.cn/dalianshangpin/sspz/487423/index.html" target="_blank">焦炭</a></td>
+					<td><a href="http://www.dce.com.cn/dalianshangpin/sspz/487450/index.html" target="_blank">焦煤</a></td>
+					<td><a href="http://www.dce.com.cn/dalianshangpin/sspz/487477/index.html" target="_blank">铁矿石</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<script src="http://futures.hexun.com/upload/jquery.js"></script>
+<script type="text/javascript">
+$('.sspzzs').mouseenter(function(){
+	$(this).find('.breed').css({left:'0'})
+})
+$('.sspzzs').mouseleave(function(){
+	$(this).find('.breed').css({left:$(this).width()})
+})
+</script>
+</body>
+</html>
